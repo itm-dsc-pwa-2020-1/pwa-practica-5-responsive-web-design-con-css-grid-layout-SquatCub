@@ -1,0 +1,139 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: #fff;
+  color: #000;
+}
+
+.contenedor{
+  width: 95%;
+  margin: 5px auto;
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, auto);
+}
+
+
+.contenedor > div, .contenedor header, .contenedor aside, .contenedor footer, .contenedor .contenido{
+  background: white;
+}
+
+.contenedor header{
+  background: #fff;
+  color: #FFF;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contenedor .contenido{
+  grid-column: span 2;
+  text-align: center;
+
+}
+
+.contenedor .side{
+  background: #fff;
+  grid-column: 3/4;
+  grid-row: 2/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contenedor .side2{
+  background: #fff;
+  grid-column: 3/4;
+  grid-row: 3/4;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+
+.contenedor .fb, .contenedor .yt, .contenedor .tw, .contenedor .pn, .contenedor .ig, .contenedor .sf{
+  margin-top: 20px;
+  background: #fff;
+  color: white;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor footer{
+  background: #fff;
+  grid-column: 1/4;
+  text-align: center;
+  letter-spacing: 3px;
+  padding: 8px;
+}
+
+@media screen
+and (min-width : 321px) and (max-width : 767px){
+  .contenedor .contenido{
+    grid-column: span 2;
+    text-align: center;
+    grid-column: 1/-1;
+  }
+  .contenedor .contenido img{
+    width: 100%;
+  }
+  .contenedor .side{
+    grid-column: 1/-1;
+    grid-row: 4/5;
+  }
+  .contenedor .side img{
+    width: 100%;
+  }
+  .contenedor .side2{
+    grid-column: 1/-1;
+    grid-row: 5/6;
+  }
+  .contenedor .side2 img{
+    width: 100%;
+  }
+  .contenedor .fb, .contenedor .ig, .contenedor .yt, .contenedor .pn, .contenedor .ig, .contenedor .sf{
+    grid-column: span 1;
+  }
+  footer img{
+    width: 100%;
+  }
+}
+
+@media screen and (min-width : 768px)
+and (max-width : 1024px) {
+  .contenedor .contenido{
+  display: flex;
+    text-align: center;
+    grid-column: 1/-1;
+  }
+  .contenedor .contenido img{
+    width: 50%;
+  }
+  .contenedor .side{
+    grid-column: 1/-1;
+    grid-row: 4/5;
+  }
+  .contenedor .side img{
+    width: 50%;
+  }
+  .contenedor .side2{
+    grid-column: 1/-1;
+    grid-row: 5/6;
+  }
+  .contenedor .side2 img{
+    width: 100%;
+  }
+  .contenedor .fb, .contenedor .ig, .contenedor .yt, .contenedor .pn, .contenedor .ig, .contenedor .sf{
+    grid-column: span 1;
+  }
+  footer img{
+    width: 100%;
+  }
+}
